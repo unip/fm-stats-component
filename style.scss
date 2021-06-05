@@ -5,6 +5,9 @@
   --very-dark-blue: hsl(233, 47%, 7%);
   --dark-blue: hsl(244, 38%, 16%);
   --violet: hsl(277, 64%, 61%);
+
+  --transparent1: hsla(0, 0%, 100%, 0.75);
+  --transparent2: hsla(0, 0%, 100%, 0.6);
 }
 
 html, body {
@@ -12,8 +15,8 @@ html, body {
 }
 
 body {
-  color: hsla(0, 0%, 100%, 0.75);
-  font-size: 15px;
+  color: var(--transparent1);
+  font-size: 19px;
   font-weight: 200;
   background-color: hsl(233, 47%, 7%);
 
@@ -23,7 +26,7 @@ body {
     overflow: hidden;
 
     .stat-text {
-      padding: 3rem 4rem;
+      padding: 3rem 6rem;
 
       @media (max-width: 375px) {
         padding: 2rem 1.8rem;
@@ -39,7 +42,7 @@ body {
     .stats {
       font-family: 'Inter', sans-serif;
       p {
-        color: hsla(0, 0%, 100%, 0.6);
+        color: var(--transparent2);
         font-size: 0.9rem;
       }
     }
@@ -61,4 +64,15 @@ body {
 
 .text-violet {
   color: var(--violet);
+}
+
+.attribution {
+  a {
+    color: var(--violet);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--transparent2);
+    }
+  }
 }
